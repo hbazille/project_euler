@@ -263,3 +263,18 @@ def fibonacci(n):
     return quick_exponent(Mat22(1, 1, 1, 0), n, mult_mat22, Mat22(1, 0, 0, 1)).b
 
 
+
+#############
+# Polynomes #
+#############
+
+def polynome_mult(p1, p2):
+    n1 = len(p1)
+    n2 = len(p2)
+    p = [0] * (n1 + n2 - 1)
+    for i in range(n1):
+        for j in range(n2):
+            p[i + j] += p1[i] * p2[j]
+    return p
+    
+

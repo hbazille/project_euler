@@ -153,7 +153,15 @@ def divisors(n):
             loop(prod, i + 1, 0)
     loop(1, 0, 0)
     return res
-    
+
+def build_primes(limit):
+    p = [2]
+    k = 3
+    while k < limit:
+        if is_prime(k):
+            p.append(k)
+        k += 2
+    return p       
             
 # Gcd #   
     

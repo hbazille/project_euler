@@ -13,6 +13,8 @@ def number_divisors(n, p):
         while n % pi == 0:
             n = n // pi
         i += 1
+    if n > 1:
+        return 1
     return t
     
 def distinct_n_factors(n, limit):
@@ -27,7 +29,8 @@ def distinct_n_factors(n, limit):
         k += 1
     return k - c
 
-# around 15 seconds on my potato
+# around 5 seconds on my potato
+# 1000 is arbitrary, having some knowledge on the solution
 if __name__ == "__main__":
-    print(distinct_n_factors(4, 100000))
+    print(distinct_n_factors(4, 1000))
     
